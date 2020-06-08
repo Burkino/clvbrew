@@ -5,7 +5,7 @@
 	"publisher": "Burkino",
 	"repository": {"directory": "https://github.com/Burkino/clvbrew"},
 	"icon": "gamertime.png",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"engines": {
 		"vscode": "^1.45.0"
 	},
@@ -43,27 +43,27 @@
 				"clvbrew.encAllStrings": {
 					"type": "boolean",
 					"default": false,
-					"description": "Encrypt all strings?"
+					"description": "Encrypt all strings\nEncrypts all constant strings"
 				},
 				"clvbrew.encImportantStrings": {
 					"type": "boolean",
 					"default": false,
-					"description": "Encrypt important strings?"
+					"description": "Encrypt important strings\nEncrypts all important strings (ex: 'http', 'https', 'getrawmetatable', etc.)"
 				},
 				"clvbrew.noControlFlow": {
 					"type": "boolean",
 					"default": false,
-					"description": "Obfuscate Control Flow?"
+					"description": "No Control Flow\nRemove control flow obfuscation (improves performance, degrades security)"
 				},
 				"clvbrew.debugInfo": {
 					"type": "boolean",
 					"default": false,
-					"description": "Keep debug info?"
+					"description": "Keep debug info\nKeep debug information (larger file size, breaks level based enviroment gathering ( ex: getfenv(2) ), better error messages)"
 				},
 				"clvbrew.noCompressBS": {
 					"type": "boolean",
 					"default": false,
-					"description": "Compress bytecode?"
+					"description": "Compress bytecode\nRemoves compression on bytecode and constant encryption (possibly higher constant security, larger file size)"
 				}
 			}
 		},

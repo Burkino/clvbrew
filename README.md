@@ -1,6 +1,7 @@
 # clvbrew-obfuscate README
 
 - Please let this work, I have spent like a lot of time just learning this.
+- Setting descriptions are from JuniorJacob
 
 ## Features
 
@@ -19,6 +20,9 @@
 - My coding being bad so something will probably break.
 
 ## Release Notes
+
+### 0.0.7
+- Better explanations for settings from JuniorJacob
 
 ### 0.0.6
 - Added repo url https://github.com/Burkino/clvbrew

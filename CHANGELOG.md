@@ -1,6 +1,9 @@
 # Change Log
 
-All notable changes to the "clvbrew-obfuscate" extension will be documented in this file.
+All notable changes to the "clvbrew" extension will be documented in this file.
+
+## [0.0.7]
+- Added settings information from JuniorJacob
 
 ## [0.0.6]
 - Added repo url https://github.com/Burkino/clvbrew
