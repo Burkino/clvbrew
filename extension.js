@@ -30,6 +30,7 @@ function activate(context) {
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerCommand('clvbrew.obfuscate', function () {
+		vscode.env.clipboard.writeText("")
 		const settings = vscode.workspace.getConfiguration('clvbrew')
 		if (settings['ApiKey'] == "") {
 			vscode.window.showErrorMessage("hey dummy you need an api key, use !api in the clvbrew server or to the bot")
@@ -63,6 +64,9 @@ function activate(context) {
 			} else if (settings['OutputType'] == 'Replace current file') {
 				vscode.window.activeTextEditor.edit(editBuilder => {editBuilder.replace(fullRange, text)})
 				vscode.window.showInformationMessage("Obfuscated")
+			} else if (settings['OutputType'] == 'Copy to clipboard') {
+				vscode.env.clipboard.writeText(text)
+				vscode.window.showInformationMessage("Obfuscated, copied to clipboard")
 			}
 		})
 		.catch(function() {
@@ -75,11 +79,10 @@ function activate(context) {
 		fetch('https://ibidk.herokuapp.com/changelog.txt')
 		.then(res => res.text())
 		.then(body => {
-		    var s = body.replace(/-/g,"# ")
-		    const versions = s.match(/(?:\# ([a-f\.0-9]+?))\[\n*((.*\n)+?)\]/g).reverse()
+		    const versions = body.match(/(?:\-([a-f\.0-9]+?))\[\n*((.*\n)+?)\]/g).reverse()
 		    let out = ""
 		    for (i in versions) {
-		        out += versions[i].replace(/(\[\n)/g, "\n").replace(/(\n\])/g, "\n\n")
+		        out += versions[i].replace(/-/,"# ").replace(/(\[\n)/g, "\n").replace(/(\n\])/g, "\n\n")
 		    }
 			vscode.workspace.openTextDocument({"content":`${out}`,"language":"markdown"})
 			vscode.window.showInformationMessage("Opened changelog")

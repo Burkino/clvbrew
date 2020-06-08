@@ -20,6 +20,11 @@
 
 ## Release Notes
 
+### 0.0.6
+- Added repo url https://github.com/Burkino/clvbrew
+- Cleaned code up a little
+- Fixed a thing with regex after clv released an update that used a - in the update notes
+
 ### 0.0.5
 - Shows error when you don't have an api key
 

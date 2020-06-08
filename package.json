@@ -5,7 +5,7 @@
 	"publisher": "Burkino",
 	"repository": {"directory": "https://github.com/Burkino/clvbrew"},
 	"icon": "gamertime.png",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"engines": {
 		"vscode": "^1.45.0"
 	},
@@ -26,11 +26,13 @@
 					"description": "Where to output obfuscated script",
 					"enum": [
 						"Replace current file",
-						"Create new file"
+						"Create new file",
+						"Copy to clipboard"
 					],
 					"enumDescriptions": [
 						"Replaces entire document with obfuscated script",
-						"Creates new document with obfuscated script"
+						"Creates new document with obfuscated script",
+						"Copies obfuscated script to the clipboard"
 					]
 				},
 				"clvbrew.ApiKey": {
