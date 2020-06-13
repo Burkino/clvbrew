@@ -30,7 +30,6 @@ function activate(context) {
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerCommand('clvbrew.obfuscate', function () {
-		vscode.env.clipboard.writeText("")
 		const settings = vscode.workspace.getConfiguration('clvbrew')
 		if (settings['ApiKey'] == "") {
 			vscode.window.showErrorMessage("hey dummy you need an api key, use !api in the clvbrew server or to the bot")

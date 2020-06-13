@@ -5,7 +5,7 @@
 	"publisher": "Burkino",
 	"repository": {"directory": "https://github.com/Burkino/clvbrew"},
 	"icon": "gamertime.png",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"engines": {
 		"vscode": "^1.45.0"
 	},

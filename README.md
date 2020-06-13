@@ -21,6 +21,9 @@
 
 ## Release Notes
 
+### 0.0.8
+- Fixed me being dumb by leaving a leftover piece of code that set your clipboard to an empty string even when the option wasnt set
+
 ### 0.0.7
 - Better explanations for settings from JuniorJacob
 

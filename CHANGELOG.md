@@ -2,6 +2,9 @@
 
 All notable changes to the "clvbrew" extension will be documented in this file.
 
+## [0.0.8]
+- Fixed me being dumb by leaving a leftover piece of code that set your clipboard to an empty string even when the option wasnt set
+
 ## [0.0.7]
 - Added settings information from JuniorJacob
 
