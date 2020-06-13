@@ -3,7 +3,7 @@
 	"displayName": "Clvbrew",
 	"description": "obfuscate with clvbrew",
 	"publisher": "Burkino",
-	"repository": {"directory": "https://github.com/Burkino/clvbrew"},
+	"repository": {"url": "https://github.com/Burkino/clvbrew"},
 	"icon": "gamertime.png",
 	"version": "0.0.8",
 	"engines": {
